@@ -1,0 +1,48 @@
+﻿<section id="player">
+    <button id="flash" class="btn selected" type="button" data-bind="click: switchToSmoothStreaming">SMOOTH STREAMING</button>
+    <button id="dash" class="btn" data-bind="click: switchToMpegDash">MPEG-DASH</button>
+
+    <div id="playerContainer">
+    </div>
+
+    <span data-bind="text: streamingUrl, visible: streamingUrl() !== null"></span>
+
+    <ul data-bind="visible: selectedAsset() !== null && selectedAsset().highQualityMp4Uri != null && selectedAsset().midQualityMp4Uri != null && selectedAsset().lowQualityMp4Uri != null">
+        <li>
+            <a data-bind="attr: { href: (selectedAsset() !== null) ? selectedAsset().highQualityMp4Uri : null }">High Quality</a>
+        </li>
+        <li>
+            <a data-bind="attr: { href: (selectedAsset() !== null) ? selectedAsset().midQualityMp4Uri : null }">Mid Quality</a>
+        </li>
+        <li>
+            <a data-bind="attr: { href: (selectedAsset() !== null) ? selectedAsset().lowQualityMp4Uri : null }">Low Quality</a>
+        </li>
+    </ul>
+</section>
+
+<script type="text/javascript">
+    var viewModel = new ViewModels.Desktop.PlayerViewModel($("#playerContainer"));
+    ko.applyBindings(viewModel, document.querySelector("#player"));
+</script>
+
+<script id="flashPlayerTemplate" type="text/html">
+    <object id="videoPlayer">
+        <param name="movie" value="/Content/Flash/StrobeMediaPlayback.swf" />
+        <param name="flashvars" value="${PlayerVariables}" />
+        <param name="allowFullScreen" value="true" />
+        <param name="allowscriptaccess" value="always" />
+        <param name="wmode" value="direct" />
+        <embed src="/Content/Flash/StrobeMediaPlayback.swf"
+               type="application/x-shockwave-flash"
+               allowscriptaccess="always"
+               allowfullscreen="true"
+               wmode="direct"
+               flashvars="${PlayerVariables}" />
+    </object>
+</script>
+
+<script id="videoPlayerTemplate" type="text/html">
+    <video id="videoPlayer" autoplay controls>
+        Your browser does not support the video tag.
+    </video>
+</script>

@@ -1,0 +1,12 @@
+﻿.containerBox {
+  margin: 0 auto;
+  width: 1080px;
+  min-width: 1080px;
+  display: block;
+  vertical-align: top;
+  padding: 8px;
+  min-height: 607.5px;
+  align-content: center;
+  z-index: 100;
+}
+/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,47 @@
+﻿@background: rgb(255, 255, 255);
+@background2: rgb(0, 188, 242);
+@background3: rgb(26, 26, 26);
+
+@borderWidth: 3px;
+@containerPadding: 8px;
+@fontSize: 14px;
+@maxWidth: 1080px;
+@contentHeight: @maxWidth * 9 / 16;
+@assetLibraryHeight: 187px;
+@thumbnailSize: (@maxWidth / 4) - (2 * @borderWidth) - (3 * 1);
+
+@borderWidth2: 1px;
+@containerPadding2: 6px;
+@fontSize2: 12px;
+@maxWidth2: 720px;
+@contentHeight2: @maxWidth2 * 9 / 16;
+@assetLibraryHeight2: 124px;
+@thumbnailSize2: (@maxWidth2 / 4) - (2 * @borderWidth2) - 3;
+
+@borderWidth3: 1px;
+@containerPadding3: 4px;
+@fontSize3: 9px;
+@maxWidth3: 480px;
+@contentHeight3: @maxWidth3 * 9 / 16;
+@assetLibraryHeight3: 82px;
+@thumbnailSize3: (@maxWidth3 / 4) - (2 * @borderWidth3) - 3;
+
+@borderWidth4: 1px;
+@containerPadding4: 2px;
+@fontSize4: 7px;
+@maxWidth4: 320px;
+@contentHeight4: @maxWidth4 * 9 / 16;
+@assetLibraryHeight4: 55px;
+@thumbnailSize4: (@maxWidth4 / 4) - (2 * @borderWidth4) - 3;
+
+.containerBox {
+    margin: 0 auto;
+    width: @maxWidth;
+    min-width: @maxWidth;
+    display: block;
+    vertical-align: top;
+    padding: @containerPadding;
+    min-height: @contentHeight;
+    align-content: center;
+    z-index: 100;
+}

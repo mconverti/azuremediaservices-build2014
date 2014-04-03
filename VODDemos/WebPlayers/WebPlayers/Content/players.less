@@ -1,0 +1,178 @@
+﻿@import "common.less";
+
+#player {
+    .containerBox;
+
+    ul {
+        margin: 0.6em 0 0 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+
+        li {
+            margin: 0 1.2em 0 0;
+            display: inline-block;
+
+            a:link {
+                color: @background;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: rgb(0, 32, 79);
+                text-decoration: none;
+            }
+
+            a:active {
+                color: rgb(0, 114, 197);
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .btn {
+        background-color: rgb(38, 207, 255);
+        color: #fff;
+        font-size: @fontSize;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        padding: 0.5em 1.8em;
+        margin: 0;
+        line-height: 1.428571429;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        border: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        min-width: 14.5em;
+
+        &.selected {
+            background-color: @background;
+            color: @background2;
+            cursor: default;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    span {
+        color: @background;
+        font-size: 95%;
+        margin: 0;
+        padding: 0.3em 0;
+        display: inline-block;
+    }
+}
+
+#playerContainer {
+    margin: 0;
+    padding: 0;
+    width: @maxWidth;
+    height: @maxWidth * 9 / 16;
+    background-color: @background;
+}
+
+#videoPlayer {
+    width: @maxWidth;
+    height: @maxWidth * 9 / 16;
+    background-color: @background;
+
+    embed {
+        width: @maxWidth;
+        height: @maxWidth * 9 / 16;
+    }
+}
+
+@media all and (max-width: @maxWidth) {
+    #player {
+        width: @maxWidth2;
+        min-width: @maxWidth2;
+        min-height: @contentHeight2;
+        padding: @containerPadding2;
+
+        .btn {
+            font-size: @fontSize2;
+        }
+    }
+
+    #playerContainer {
+        width: @maxWidth2;
+        height: @maxWidth2 * 9 / 16;
+    }
+
+    #videoPlayer {
+        width: @maxWidth2;
+        height: @maxWidth2 * 9 / 16;
+
+        embed {
+            width: @maxWidth2;
+            height: @maxWidth2 * 9 / 16;
+        }
+    }
+}
+
+@media all and (max-width: @maxWidth2) {
+    #player {
+        width: @maxWidth3;
+        min-width: @maxWidth3;
+        min-height: @contentHeight3;
+        padding: @containerPadding3;
+
+        .btn {
+            font-size: @fontSize3;
+        }
+    }
+
+    #playerContainer {
+        width: @maxWidth3;
+        height: @maxWidth3 * 9 / 16;
+    }
+
+    #videoPlayer {
+        width: @maxWidth3;
+        height: @maxWidth3 * 9 / 16;
+
+        embed {
+            width: @maxWidth3;
+            height: @maxWidth3 * 9 / 16;
+        }
+    }
+}
+
+@media all and (max-width: @maxWidth3) {
+    #player {
+        width: @maxWidth4;
+        min-width: @maxWidth4;
+        min-height: @contentHeight4;
+        padding: @containerPadding4;
+
+        .btn {
+            font-size: @fontSize4;
+        }
+    }
+
+    #playerContainer {
+        width: @maxWidth4;
+        height: @maxWidth4 * 9 / 16;
+    }
+
+    #videoPlayer {
+        width: @maxWidth4;
+        height: @maxWidth4 * 9 / 16;
+
+        embed {
+            width: @maxWidth4;
+            height: @maxWidth4 * 9 / 16;
+        }
+    }
+}

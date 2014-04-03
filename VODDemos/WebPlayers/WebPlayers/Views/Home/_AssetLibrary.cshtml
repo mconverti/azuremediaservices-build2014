@@ -1,0 +1,21 @@
+﻿<section id="assetLibrary">
+    <span class="noresults" data-bind="visible: noAssets()">NO ASSETS AVAILABLE</span>
+    <ul class="assets" data-bind="foreach: currentAssets, visible: !noAssets()">
+        <li class="video-thumbnail" data-bind="click: $parent.selectAsset, css: { selected: $parent.selectedAsset() && $parent.selectedAsset().id === id }">
+            <span class="title" data-bind="text: name"></span>
+            <img class="image" data-bind="attr: {src: thumbnailUri, alt: name}">
+        </li>
+    </ul>
+    <ul class="pager" data-bind="foreach: pages">
+        <li class="page">
+            <span data-bind="text: pageText, css: { selected: selected }, click: function() { if(!selected()) $root.changePage($data); } "></span>
+        </li>
+    </ul>
+    <div></div>
+</section>
+
+<script type="text/javascript">
+    var viewModel = new ViewModels.AssetLibraryViewModel(new Services.AssetLibraryService());
+    ko.applyBindings(viewModel, document.querySelector("#assetLibrary"));
+    viewModel.loadAssets();
+</script>

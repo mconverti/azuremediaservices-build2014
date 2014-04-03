@@ -1,0 +1,78 @@
+﻿.containerBox {
+  margin: 0 auto;
+  width: 1080px;
+  min-width: 1080px;
+  display: block;
+  vertical-align: top;
+  padding: 8px;
+  min-height: 607.5px;
+  align-content: center;
+  z-index: 100;
+}
+body {
+  background-color: #1a1a1a;
+  font-family: "â˜ºSegoe", "Segoe UI", Segoe, Arial, Verdana, sans-serif;
+  color: #00bcf2;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  align-content: center;
+}
+footer {
+  background-color: #1a1a1a;
+  padding: 8px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 150%;
+}
+footer p {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  background-color: #00bcf2;
+  width: auto;
+  min-width: 1080px;
+  padding: 0;
+  z-index: 10;
+}
+.container hr {
+  border-color: #ffffff;
+}
+.alt {
+  background-color: #ffffff;
+}
+@media all and (max-width: 1080px) {
+  body {
+    font-size: 12px;
+  }
+  footer {
+    padding: 6px;
+  }
+  .container {
+    min-width: 720px;
+  }
+}
+@media all and (max-width: 720px) {
+  body {
+    font-size: 9px;
+  }
+  footer {
+    padding: 4px;
+  }
+  .container {
+    min-width: 480px;
+  }
+}
+@media all and (max-width: 480px) {
+  body {
+    font-size: 7px;
+  }
+  footer {
+    padding: 2px;
+  }
+  .container {
+    min-width: 320px;
+  }
+}
+/*# sourceMappingURL=site.css.map */

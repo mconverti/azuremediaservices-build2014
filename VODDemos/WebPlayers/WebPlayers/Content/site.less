@@ -1,0 +1,82 @@
+﻿@import "common.less";
+
+body {
+    background-color: @background3;
+    font-family: "â˜ºSegoe", "Segoe UI", Segoe, Arial, Verdana, sans-serif;
+    color: @background2;
+    margin: 0;
+    padding: 0;
+    font-size: @fontSize;
+    align-content: center;
+}
+
+footer {
+    background-color: @background3;
+    padding: @containerPadding;
+    text-align: center;
+    color: @background;
+    font-size: 150%;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.container {
+    background-color: @background2;
+    width: auto;
+    min-width: @maxWidth;
+    padding: 0;
+    z-index: 10;
+
+    hr {
+        border-color: @background;
+    }
+}
+
+.alt {
+    background-color: @background;
+}
+
+@media all and (max-width: @maxWidth) {
+    body {
+        font-size: @fontSize2;
+    }
+
+    footer {
+        padding: @containerPadding2;
+    }
+
+    .container {
+        min-width: @maxWidth2;
+    }
+}
+
+@media all and (max-width: @maxWidth2) {
+    body {
+        font-size: @fontSize3;
+    }
+
+    footer {
+        padding: @containerPadding3;
+    }
+
+    .container {
+        min-width: @maxWidth3;
+    }
+}
+
+@media all and (max-width: @maxWidth3) {
+    body {
+        font-size: @fontSize4;
+    }
+
+    footer {
+        padding: @containerPadding4;
+    }
+
+    .container {
+        min-width: @maxWidth4;
+    }
+}
