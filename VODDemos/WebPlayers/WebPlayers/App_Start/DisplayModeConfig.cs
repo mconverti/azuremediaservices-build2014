@@ -9,6 +9,20 @@
         {
             filters.Modes.Insert(
                 0,
+                new DefaultDisplayMode("WindowsPhone")
+                {
+                    ContextCondition =
+                    ctx =>
+                    {
+                        var agent = ctx.Request.UserAgent ?? string.Empty;
+                        agent = agent.ToUpperInvariant();
+
+                        return agent.Contains("WINDOWS PHONE");
+                    }
+                });
+
+            filters.Modes.Insert(
+                1,
                 new DefaultDisplayMode("Apple")
                 {
                     ContextCondition =
@@ -25,7 +39,7 @@
                 });
 
             filters.Modes.Insert(
-                1,
+                2,
                 new DefaultDisplayMode("Android")
                 {
                     ContextCondition =

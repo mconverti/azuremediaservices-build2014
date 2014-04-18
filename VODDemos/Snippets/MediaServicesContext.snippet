@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Media Services context</Title>
+      <Author>Mariano Converti</Author>
+      <Description>Media Services context</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut>MediaServicesContext</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations />
+      <Code Language="csharp" Kind="method body" Delimiter="$"><![CDATA[// 1. Connect to the Media Services account.
+#region Media Services credentials
+string mediaServicesAccountName = "%MediaServicesAccountName%";
+string mediaServicesAccountKey = "%MediaServicesAccountKey%";
+#endregion
+
+CloudMediaContext context = new CloudMediaContext(mediaServicesAccountName, mediaServicesAccountKey);]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

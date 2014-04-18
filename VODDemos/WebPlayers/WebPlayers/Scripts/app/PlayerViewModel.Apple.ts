@@ -9,7 +9,6 @@ module ViewModels.Apple {
     export class PlayerViewModel {
 
         private videoElement: HTMLElement;
-        private videoPlayer: MediaPlayer;
 
         public selectedAsset: KnockoutObservable<Asset>;
 

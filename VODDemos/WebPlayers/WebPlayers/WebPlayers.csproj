@@ -23,7 +23,7 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <TypeScriptToolsVersion>0.9</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -327,6 +327,8 @@
     <Content Include="Views\Home\_Player.Android.cshtml" />
     <Content Include="Views\Home\Index.Apple.cshtml" />
     <Content Include="Views\Home\_Player.Apple.cshtml" />
+    <Content Include="Views\Home\Index.WindowsPhone.cshtml" />
+    <Content Include="Views\Home\_Player.WindowsPhone.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -339,6 +341,7 @@
     <TypeScriptCompile Include="Scripts\app\Models\AssetsInfo.ts" />
     <TypeScriptCompile Include="Scripts\app\PlayerViewModel.Apple.ts" />
     <TypeScriptCompile Include="Scripts\app\PlayerViewModel.Android.ts" />
+    <TypeScriptCompile Include="Scripts\app\PlayerViewModel.WindowsPhone.ts" />
     <TypeScriptCompile Include="Scripts\app\Services\AssetLibraryService.ts" />
     <TypeScriptCompile Include="Scripts\app\ViewModels\AssetLibraryViewModel.ts" />
     <TypeScriptCompile Include="Scripts\app\PlayerViewModel.Desktop.ts" />

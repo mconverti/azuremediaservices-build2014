@@ -24,6 +24,9 @@
             bundles.Add(new ScriptBundle("~/bundles/app/desktop").Include(
                 "~/Scripts/app/PlayerViewModel.Desktop.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/app/windowsphone").Include(
+                "~/Scripts/app/PlayerViewModel.WindowsPhone.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/app/apple").Include(
                 "~/Scripts/app/PlayerViewModel.Apple.js"));
 

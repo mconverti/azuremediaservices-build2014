@@ -1,0 +1,24 @@
+﻿<section id="player">
+    <video id="videoPlayer" autoplay controls>
+        Your browser does not support the video tag.
+    </video>
+
+    <span data-bind="text: streamingUrl, visible: streamingUrl() !== null"></span>
+
+    <ul data-bind="visible: selectedAsset() !== null && selectedAsset().highQualityMp4Uri != null && selectedAsset().midQualityMp4Uri != null && selectedAsset().lowQualityMp4Uri != null">
+        <li>
+            <a data-bind="attr: { href: (selectedAsset() !== null) ? selectedAsset().highQualityMp4Uri : null }">High Quality</a>
+        </li>
+        <li>
+            <a data-bind="attr: { href: (selectedAsset() !== null) ? selectedAsset().midQualityMp4Uri : null }">Mid Quality</a>
+        </li>
+        <li>
+            <a data-bind="attr: { href: (selectedAsset() !== null) ? selectedAsset().lowQualityMp4Uri : null }">Low Quality</a>
+        </li>
+    </ul>
+</section>
+
+<script type="text/javascript">
+    var viewModel = new ViewModels.WindowsPhone.PlayerViewModel(document.querySelector("#videoPlayer"));
+    ko.applyBindings(viewModel, document.querySelector("#player"));
+</script>
